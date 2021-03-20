@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Own JSFiddle</title>
+    <link rel="stylesheet" type="text/css" href="./jsfiddle.css"></link>
+  </head>
+  <body class="jsfiddle">
+    <div class="toolbar">
+      <button id="run">run</button>
+      <button id="clear">clear</button>
+    </div>
+    <div class="display-flex">
+      <div class="content-box">
+        <div class="content-title">HTML</div>
+        <textarea id="html-content" class="textarea-box"></textarea>
+      </div>
+      <div class="content-box">
+        <div class="content-title">CSS</div>
+        <textarea id="css-content" class="textarea-box"></textarea>
+      </div>
+      <div class="content-box">
+        <div class="content-title">JavaScript</div>
+        <textarea id="js-content" class="textarea-box"></textarea>
+      </div>  
+      <div class="display-content content-box">
+        <iframe id="display-content"></iframe>
+      </div>
+    </div>
+    <script src="./jsfiddle.js"></script>
+  </body>
+</html>
