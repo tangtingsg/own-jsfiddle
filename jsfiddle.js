@@ -34,9 +34,13 @@ runBtn.onclick = (event) => {
     </html>`
 
   // write content result to iframe
-  let ifrm = document.getElementById('display-content');
-  ifrm = ifrm.contentWindow || ifrm.contentDocument.document || ifrm.contentDocument;
-  ifrm.document.open();
-  ifrm.document.write(content);
-  ifrm.document.close();
+  const ifrm = document.getElementById('display-content');
+  const iframeDocument = (ifrm.contentWindow  && ifrm.contentWindow.document)
+    || ifrm.contentDocument;
+  if (iframeDocument) {
+    iframeDocument.open();
+    iframeDocument.write(content);
+    iframeDocument.close();
+  }
+
 }
